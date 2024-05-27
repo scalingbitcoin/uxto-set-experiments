@@ -1,6 +1,7 @@
 # uxto-set-experiments
 
 # Prerequisites
+
     - A C++20 compatible compiler (gcc, clang, MSVC)
     - cmake 3.15 or above
 
@@ -26,6 +27,7 @@ conan install conanfile.py --lockfile=build/conan.lock -of build --build=missing
 
 ## Build the program
 
+```
 cmake --preset conan-release \
          -DCMAKE_VERBOSE_MAKEFILE=ON \
          -DGLOBAL_BUILD=ON \
@@ -35,6 +37,7 @@ cmake --build --preset conan-release -j4 \
          -DCMAKE_VERBOSE_MAKEFILE=ON \
          -DGLOBAL_BUILD=ON \
          -DCMAKE_BUILD_TYPE=Release
+```
 
 # Run
 
