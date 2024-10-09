@@ -70,7 +70,16 @@ bytes_t hex2vec(char const* src, size_t n) {
     return bytes;
 }
 
-std::string bytes2hex(bytes_t const& bytes) {
+// std::string bytes2hex(bytes_t const& bytes) {
+//     std::string hex(bytes.size() * 2, '\0');
+//     for (size_t i = 0; i < bytes.size(); ++i) {
+//         hex[i * 2] = "0123456789ABCDEF"[bytes[i] >> 4];
+//         hex[i * 2 + 1] = "0123456789ABCDEF"[bytes[i] & 0xF];
+//     }
+//     return hex;
+// }
+
+std::string bytes2hex(std::span<const uint8_t> bytes) {
     std::string hex(bytes.size() * 2, '\0');
     for (size_t i = 0; i < bytes.size(); ++i) {
         hex[i * 2] = "0123456789ABCDEF"[bytes[i] >> 4];
