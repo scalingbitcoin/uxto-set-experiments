@@ -33,13 +33,17 @@ Verify `conan` instalation
 
 `conan --version`
 
+## Let Conan detect the profile
+
+`conan profile detect`
+
 # Build
 
 ## Prepare the dependencies
 
 We install the Knuth related dependencies:
 ```
-pip install kthbuild --user --upgrade
+pip install kthbuild --upgrade --user
 
 conan remote add kth https://packages.kth.cash/api
 
